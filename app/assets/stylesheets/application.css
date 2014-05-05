@@ -12,3 +12,33 @@
  *= require social_stream
  *= require_tree .
  */
+
+header .navbar-inner .logo, header .navbar-inner .logo-responsive {
+    padding-left:30px;
+}
+
+.logo-header-in .top-plane-shape {
+    background: none repeat scroll 0 0 #43AD11 !important;
+    border: 4px solid #43AD11 !important;
+    height: 10px;
+    margin-top: -4px;
+    width: 10px;
+}
+.logo-header-in .left-plane-shape {
+    background: none repeat scroll 0 0 #43AD11 !important;
+    border: 4px solid #43AD11 !important;
+    height: 10px;
+    margin-left: 35px;
+    margin-top: 16px;
+    width: 10px;
+}
+
+.progress-striped .bar {
+	background-image: none;
+	background-color: #43AD11 !important;
+}
+.progress .bar {
+    background-color: #43AD11;
+    background-image: -moz-linear-gradient(center top , #43AD11, #2E8505);
+
+}
