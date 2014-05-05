@@ -81,6 +81,28 @@ class GoalsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+   # GET /goals/preset
+  # GET /goals/preset.json
+  def preset
+    @goal = Goal.new
+
+    respond_to do |format|
+      format.html # preset.html.erb
+      format.json { render json: @goal }
+    end
+  end
+end
+
+# GET /goals/1
+# GET /goals/1.json
+def progress
+    @goal = Goal.find(params[:id])
+
+    respond_to do |format|
+      format.html # progress.html.erb
+      format.json { render json: @goal }
+    end
 
   private
 

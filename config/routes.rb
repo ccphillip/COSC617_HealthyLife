@@ -1,5 +1,5 @@
 COSC617Healthylife::Application.routes.draw do
-  resources :goals
+  #resources :goals
 
 
   devise_for :users, :controllers => {:omniauth_callbacks => 'omniauth_callbacks'}
