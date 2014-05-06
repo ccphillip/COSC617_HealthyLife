@@ -42,7 +42,7 @@ class GoalsController < ApplicationController
   # POST /goals.json
   def create
     @goal = Goal.new(goal_params)
-
+  
     respond_to do |format|
       if @goal.save
         format.html { redirect_to @goal, notice: 'Goal was successfully created.' }
@@ -85,6 +85,7 @@ class GoalsController < ApplicationController
    # GET /goals/preset
   # GET /goals/preset.json
   def preset
+ 
     @goal = Goal.new
 
     respond_to do |format|

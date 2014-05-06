@@ -1,0 +1,5 @@
+<!-- insert_before 'li' -->
+
+<li class="goals-menu">
+      <%= link_to t('dropdown.goals'), goals_path, :id => "btn_menu_settings" %>
+    </li>
