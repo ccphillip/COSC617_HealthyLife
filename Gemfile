@@ -6,6 +6,8 @@ gem 'social_stream', git: 'git://github.com/ging/social_stream.git', branch: 'ma
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
+gem 'strong_parameters'
+
 
 
 # Gems used only for assets and not required
