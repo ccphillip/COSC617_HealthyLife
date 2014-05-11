@@ -51,12 +51,12 @@ SocialStream.setup do |config|
   # Remember you must add an "activity_object_id" foreign key column to your migration!
   #
   # config.objects += [ :foo, :bar ]
-  config.objects << :goals
+  config.objects << :goal
   # Activity objects included in the wall input form
   # You can write your own view in app/views/your_objects/_new_activity.html.erb
   #
   # config.activity_forms = [ :post, :document, :foo, :bar ]
-  config.activity_forms = [:"goals/new"]
+  #config.activity_forms = [:"goals/new"]
   # Objects that appear in the repository tab
   #
   # You must create a vew in app/views/your_objects/_your_object.hmtl.erb

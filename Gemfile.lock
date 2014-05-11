@@ -352,5 +352,6 @@ DEPENDENCIES
   sass-rails (~> 3.2.3)
   social_stream!
   sqlite3
+  strong_parameters
   therubyracer
   uglifier (>= 1.0.3)

@@ -41,8 +41,9 @@ class GoalsController < ApplicationController
   # POST /goals
   # POST /goals.json
   def create
-    @goal = Goal.new(goal_params)
-
+   #@goal = Goal.new(goal_params)
+   @goal = Goal.new(permitted_params)
+  
     respond_to do |format|
       if @goal.save
         format.html { redirect_to @goal, notice: 'Goal was successfully created.' }
@@ -60,7 +61,8 @@ class GoalsController < ApplicationController
     @goal = Goal.find(params[:id])
 
     respond_to do |format|
-      if @goal.update_attributes(goal_params)
+     # if @goal.update_attributes(goal_params)
+     if @goal.update_attributes(permitted_params)
         format.html { redirect_to @goal, notice: 'Goal was successfully updated.' }
         format.json { head :no_content }
       else
@@ -85,6 +87,7 @@ class GoalsController < ApplicationController
    # GET /goals/preset
   # GET /goals/preset.json
   def preset
+ 
     @goal = Goal.new
 
     respond_to do |format|
