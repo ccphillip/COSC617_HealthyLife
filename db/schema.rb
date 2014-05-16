@@ -194,14 +194,14 @@ ActiveRecord::Schema.define(:version => 20140504224635) do
   add_index "events", ["room_id"], :name => "index_events_on_room_id"
 
   create_table "goals", :force => true do |t|
-    t.integer  "activity_object_id"
+    t.integer  "activity_object_id_id"
     t.string   "name"
     t.string   "description"
     t.date     "date"
     t.string   "status"
     t.string   "priority"
-    t.datetime "created_at",         :null => false
-    t.datetime "updated_at",         :null => false
+    t.datetime "created_at",            :null => false
+    t.datetime "updated_at",            :null => false
   end
 
   create_table "groups", :force => true do |t|

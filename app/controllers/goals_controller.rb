@@ -41,7 +41,11 @@ class GoalsController < ApplicationController
   # POST /goals
   # POST /goals.json
   def create
-   #@goal = Goal.new(goal_params)
+    
+   params[:goal][:owner_id] = current_subject.try(:actor_id)
+   params[:goal][:author_id] = current_subject.try(:actor_id)
+   params[:goal][:user_author_id] = current_user.try(:actor_id)
+
    @goal = Goal.new(permitted_params)
   
     respond_to do |format|
@@ -112,8 +116,8 @@ def progress
     # Use this method to whitelist the permissible parameters. Example:
     # params.require(:person).permit(:name, :age)
     # Also, you can specialize this method with per-user checking of permissible attributes.
-    def goal_params
-      params.require(:goal).permit(:date, :description, :name, :priority, :status)
+    def permitted_params
+      params.require(:goal).permit(:date, :description, :name, :priority, :status, :owner_id, :author_id, :user_author_id)
     end
     
     def allowed_params
