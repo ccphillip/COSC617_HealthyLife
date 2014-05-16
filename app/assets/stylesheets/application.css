@@ -13,6 +13,10 @@
  *= require_tree .
  */
 
+header a:hover {
+	background-color:#FFFFFF !important;
+}
+
 header .navbar-inner .logo, header .navbar-inner .logo-responsive {
     padding-left:30px;
 }
