@@ -1,12 +1,8 @@
 class ArticlesController < ApplicationController
   include SocialStream::Controllers::Objects
-  before_filter :index
-  
    def index
-     
     @articles = Article.find_all_by_user_id(current_user.id)
-     @activities =
-      Activity.find_all_by_author_id(current_user.id)
+     
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @articles }

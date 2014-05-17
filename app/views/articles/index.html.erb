@@ -1,10 +1,5 @@
-
- <% if @articles==nil %> 
- <h1> Sorry, you don't have any article </h1>
- <%= link_to 'New Article', new_article_path %>
-
- <% else %>
- <h1>Listing articles</h1>
+  <% if @articles.any? %> 
+<h1>Listing articles</h1>
 
 <table>
   <tr>
@@ -15,6 +10,7 @@
     <th></th>
     <th></th>
   </tr>
+ 
 <% @articles.each do |article| %>
   <tr>
     <td><%= article.subject %></td>
@@ -30,6 +26,8 @@
 <br />
 
 <%= link_to 'New Article', new_article_path %>
-
+<% else %>
+<h1> Sorry, you don't have any article </h1>
+<h1><%= link_to 'Create Article', new_article_path %></h1>
 <%end%>
  
