@@ -1,0 +1,23 @@
+<h1>Goal Progress</h1>
+<table>
+	<% @progresses.each do |progress| %>
+	<tr>
+		<td class = "list_description">
+			<dl>
+				<dt>Number: <%= progress.number%></dt>
+				<dd>Description: <%= progress.description%></dd>
+				<p><ss>Submitted on: </ss><%= progress.created %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			</dl>
+		</td>
+		<td class = "list_actions">
+			<%= link_to 'Show', progress %><br/>
+			<%= link_to 'Edit Progress', edit_progress_path(progress) %><br/>
+			<%= link_to 'Destroy', progress, method: :delete, data: { confirm: 'Are you sure?' } %><br/>
+		</td>
+	</tr>
+	<%end%>
+</table>
+
+<br />
+
+<%= link_to 'New Progress', new_progress_path %>

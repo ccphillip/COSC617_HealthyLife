@@ -1,4 +1,7 @@
 COSC617Healthylife::Application.routes.draw do
+  resources :progresses
+
+
   #resources :goals
 
 
