@@ -3,7 +3,7 @@ class Ability
 
   def initialize(subject)
     super
-
+  can :manage, :all
     # Add your authorization rules here
     # For instance:
     #    can :create, Comment

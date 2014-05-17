@@ -11,7 +11,9 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140419175658) do
+ 
+ActiveRecord::Schema.define(:version => 20140517170539) do
+ 
 
   create_table "activities", :force => true do |t|
     t.integer  "activity_verb_id"
@@ -289,6 +291,14 @@ ActiveRecord::Schema.define(:version => 20140419175658) do
   end
 
   add_index "profiles", ["actor_id"], :name => "index_profiles_on_actor_id"
+
+  create_table "progresses", :force => true do |t|
+    t.integer  "number"
+    t.string   "description"
+    t.date     "created"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
   create_table "receipts", :force => true do |t|
     t.integer  "receiver_id"
