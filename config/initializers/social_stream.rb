@@ -52,11 +52,13 @@ SocialStream.setup do |config|
   #
   # config.objects += [ :foo, :bar ]
   config.objects << :goal
+  config.objects += [:article]
   # Activity objects included in the wall input form
   # You can write your own view in app/views/your_objects/_new_activity.html.erb
   #
   # config.activity_forms = [ :post, :document, :foo, :bar ]
   #config.activity_forms = [:"goals/new"]
+  #config.activity_forms = [:article]
   # Objects that appear in the repository tab
   #
   # You must create a vew in app/views/your_objects/_your_object.hmtl.erb

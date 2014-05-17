@@ -1,0 +1,18 @@
+ 
+<%= div_for article do %>
+    
+  <div class="subject">
+    <% if article.subject %>
+      <h6>
+        <%= article.subject %>
+      </h6>
+    <% end %>
+    <div class="body">
+      <%= article.body %>
+    </div>
+     
+    <%= render partial: 'objects/timeline_description',
+               object: article,
+               as: :obj %>
+  </div>
+<% end %>

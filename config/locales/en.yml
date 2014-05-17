@@ -1,6 +1,7 @@
 # Sample localization file for English. Add more files in this directory for other locales.
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 en:
+   
   language_name: English
   actor:
     name: Name
@@ -37,6 +38,7 @@ en:
         password_confirmation: Confirm password
         remember_me: Remember me
   activity:
+     
     audience:
       hidden:
         summary: Restricted
@@ -662,3 +664,4 @@ en:
   lang:
     browser: Auto-detect browser language
     none: Language independent content
+ 

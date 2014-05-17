@@ -3,3 +3,6 @@
 <li class="goals-menu">
       <%= link_to t('dropdown.goals'), goals_path, :id => "btn_menu_settings" %>
     </li>
+    <li class="articles-menu">
+      <%= link_to t('dropdown.articles'), articles_path, :id => "btn_menu_settings" %>
+    </li>
