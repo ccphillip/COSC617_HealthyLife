@@ -1,0 +1,18 @@
+ 
+<%= div_for goal do %>
+    
+  <div class="subject">
+    <% if goal.name %>
+      <h6>
+        <%= goal.name %>
+      </h6>
+    <% end %>
+    <div class="body">
+      <%= goal.description %>
+    </div>
+     
+    <%= render partial: 'objects/timeline_description',
+               object: goal,
+               as: :obj %>
+  </div>
+<% end %>

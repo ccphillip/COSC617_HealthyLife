@@ -40,10 +40,10 @@ def progress
     # params.require(:person).permit(:name, :age)
     # Also, you can specialize this method with per-user checking of permissible attributes.
     def permitted_params
-      params.require(:goal).permit(:date, :description, :name, :priority, :status, :user_id)
+      params.require(:goal).permit(:date, :description, :name, :priority, :status)
     end
     
     def allowed_params
-      [:date, :description, :name, :priority, :status, :activity_object]
+      [:date, :description, :name, :priority, :status]
     end
 end
