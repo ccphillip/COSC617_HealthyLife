@@ -1,25 +1,24 @@
-  <% if @articles.any? %> 
-<h1>Listing articles</h1>
-
-<table>
-  <tr>
-    <th>Subject</th>
-    <th>Body</th>
-    <th>Article type</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<%= render partial: 'toolbar/home' %>
  
+<% if @articles.any? %> 
+ <%= render partial: 'sidebar/show' %>
+ <div id="article_feed">
+ <h1>My Article Feed </h1>
 <% @articles.each do |article| %>
   <tr>
-    <td><%= article.subject %></td>
-    <td><%= article.body %></td>
-    <td><%= article.article_type %></td>
-    <td><%= link_to 'Show', article %></td>
-    <td><%= link_to 'Edit', edit_article_path(article) %></td>
-    <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+    <td>
+    	<%= link_to image_tag(current_user.logo.url('small'),
+        :alt => current_user.name), current_user %>
+      </td>
+     
+ 
+ 	 
+ 	<td><%= article.subject %><br></td>
+ 	<tr><td>           <td>
+    <td><%= link_to 'See Details...  ', article %></td>
+    <td><%= link_to 'Update    ', edit_article_path(article) %></td>
+    <td><%= link_to 'Delete', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr></tr>  <br>
 <% end %>
 </table>
 
@@ -30,4 +29,5 @@
 <h1> Sorry, you don't have any article </h1>
 <h1><%= link_to 'Create Article', new_article_path %></h1>
 <%end%>
+ 
  
