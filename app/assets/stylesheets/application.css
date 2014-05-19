@@ -12,13 +12,15 @@
  *= require social_stream
  *= require_tree .
  */
-
+.wrapper {
+	background: url(/assets/leaf-icon-transp-blue.png) no-repeat left bottom fixed
+}
 header a:hover {
 	background-color:#FFFFFF !important;
 }
 
 a:hover {
-	background-color:#FFFFFF !important;
+	background-color: transparent !important;
 	color: #0d2701 !important;
 	text-decoration: none !important
 }
