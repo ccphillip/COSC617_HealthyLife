@@ -19,6 +19,8 @@ header a:hover {
 
 a:hover {
 	background-color:#FFFFFF !important;
+	color: #0d2701 !important;
+	text-decoration: none !important
 }
 
 header .navbar-inner .logo, header .navbar-inner .logo-responsive {
