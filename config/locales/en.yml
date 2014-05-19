@@ -40,6 +40,9 @@ en:
   article:
     confirm_delete: Delete activity?
     delete: Delete
+  goal:
+    confirm_delete: Delete goal?
+    delete: Delete
   activity:
      
     audience:
