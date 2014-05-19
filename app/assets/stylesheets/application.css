@@ -17,9 +17,14 @@ header a:hover {
 	background-color:#FFFFFF !important;
 }
 
+a:hover {
+	background-color:#FFFFFF !important;
+}
+
 header .navbar-inner .logo, header .navbar-inner .logo-responsive {
     padding-left:30px;
 }
+
 
 .logo-header-in .top-plane-shape {
     background: none repeat scroll 0 0 #43AD11 !important;
